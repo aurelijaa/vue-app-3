@@ -1,24 +1,41 @@
 <template>
-  <div id="app">
+  <div class="app">
     <AppHeader />
-    <AppContainer />
-    <AppWhiteBox />
-    <RouterView />
+    <div class="app__whitebox">
+      <AppWhiteBox>
+        <RouterView />
+      </AppWhiteBox>
+    </div>
+    <AppFooter />
   </div>
 </template>
 
 <script>
 import AppHeader from '@/components/AppHeader'
-import AppContainer from '@/components/AppContainer'
 import AppWhiteBox from '@/components/AppWhiteBox'
+import AppFooter from '@/components/AppFooter'
 
 export default {
-
   name: 'App',
   components: {
     AppHeader,
-    AppContainer,
-    AppWhiteBox
+    AppWhiteBox,
+    AppFooter
   }
 }
 </script>
+
+<style lang="scss">
+.app {
+  display: flex;
+  flex-flow: column;
+  min-height: 100%;
+
+  &__whitebox {
+    display: flex;
+    flex: 1;
+    margin-top: -45px;
+    padding: 0 130px;
+  }
+}
+</style>

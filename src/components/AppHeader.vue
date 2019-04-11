@@ -1,5 +1,6 @@
 <template>
   <div class="app-header-wraper">
+    <AppNav />
     <header class="app-header">
       <div class="app-header__content">
         <h1> Vardas Pavarde</h1>
@@ -10,8 +11,12 @@
 </template>
 
 <script>
+import AppNav from '@/components/AppNav'
 export default {
-  name: 'AppHeader'
+  name: 'AppHeader',
+  components: {
+    AppNav
+  }
 }
 </script>
 
