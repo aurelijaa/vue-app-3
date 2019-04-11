@@ -1,13 +1,24 @@
 <template>
   <div id="app">
-    <RouterView/>
+    <AppHeader />
+    <AppContainer />
+    <AppWhiteBox />
+    <RouterView />
   </div>
 </template>
 
 <script>
+import AppHeader from '@/components/AppHeader'
+import AppContainer from '@/components/AppContainer'
+import AppWhiteBox from '@/components/AppWhiteBox'
+
 export default {
-  name: "App"
-};
+
+  name: 'App',
+  components: {
+    AppHeader,
+    AppContainer,
+    AppWhiteBox
+  }
+}
 </script>
-
-

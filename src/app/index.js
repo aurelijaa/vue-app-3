@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App'
-import {createRouter} from '@/packages/vue-router'
+import { createRouter } from '@/packages/vue-router'
 
 export const createApp = () => {
   const router = createRouter()
